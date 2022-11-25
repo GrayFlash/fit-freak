@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "p2p server",
+  "main": "index.js",
+  "author": "GrayFlash",
+  "license": "ISC",
+  "engines": {
+    "node": "19.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "start": "PROD=true node index.js"
+  }
+}
