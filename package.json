@@ -1,0 +1,22 @@
+{
+  "name": "fit-freak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrayFlash/fit-freak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrayFlash/fit-freak/issues"
+  },
+  "homepage": "https://github.com/GrayFlash/fit-freak#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}
