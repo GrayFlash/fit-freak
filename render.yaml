@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: server
+    env: node
+    startCommand: cd server && npm start
+    # staticPublishPath: ./build
+    # pullRequestPreviewsEnabled: true # optional
+    buildFilter:
+      paths:
+      - server/*.js
+  - type: web
+    name: react site
+    env: node
+    startCommand: cd frontend && npm start
+    # staticPublishPath: npm start
+    # pullRequestPreviewsEnabled: true # optional
+    buildFilter:
+      paths:
+      - frontend/src/**/*.js
+      # ignoredPaths:
+      # - src/**/*.test.js
+    

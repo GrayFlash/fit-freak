@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, useNavigate, Route } from "react-router-dom";
+import HomePage from "./Views/HomePage";
+import PoseAcc from "./Views/PoseAcc";
+import Room from './Views/Room';
 
-function App() {
+const App = () => {
+  // let navigate = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/room/:roomID" element={<Room/>} />
+          <Route path="/poseaccuracy" element={<PoseAcc />} />
+        </Routes>
+      </Router>
   );
-}
+};
 
 export default App;
