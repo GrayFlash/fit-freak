@@ -2,7 +2,7 @@ services:
   - type: web
     name: server
     env: node
-    buildCommand: cd server && npm start
+    startCommand: cd server && npm start
     # staticPublishPath: ./build
     # pullRequestPreviewsEnabled: true # optional
     buildFilter:
@@ -10,9 +10,9 @@ services:
       - server/*.js
   - type: web
     name: react site
-    env: static
-    buildCommand: cd frontend && npm start
-    staticPublishPath: npm start
+    env: node
+    startCommand: cd frontend && npm start
+    # staticPublishPath: npm start
     # pullRequestPreviewsEnabled: true # optional
     buildFilter:
       paths:
