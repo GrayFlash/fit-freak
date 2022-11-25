@@ -1,0 +1,32 @@
+service:
+  - type: web
+    name: server
+    env: node
+    buildCommand: cd server && npm start
+    # staticPublishPath: ./build
+    # pullRequestPreviewsEnabled: true # optional
+    buildFilter:
+      paths:
+      - server/*.js
+  - type: web
+    name: react site
+    env: static
+    buildCommand: cd frontend && npm start
+    staticPublishPath: npm start
+    # pullRequestPreviewsEnabled: true # optional
+    buildFilter:
+      paths:
+      - frontend/src/**/*.js
+      # ignoredPaths:
+      # - src/**/*.test.js
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+    routes:
+      - type: redirect
+        source: /old
+        destination: /new
+      - type: rewrite
+        source: /a/*
+        destination: /a
