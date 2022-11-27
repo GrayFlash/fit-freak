@@ -89,6 +89,7 @@ def compare_with_base():
     curr_image = cv2.imread("curr.jpg", 1)
     base_image = cv2.imread("base.jpg", 1)
     BG_COLOR = (192, 192, 192) # gray
+    arr = []
     with mp_pose.Pose(
         static_image_mode=True,
         model_complexity=2,
@@ -101,9 +102,23 @@ def compare_with_base():
             print("Could not obtain landmark points")
             return
         for i in landmark_lines:
-            print(calc_angle(base_results, i))
-            print(calc_angle(curr_results, i))
-    return { "accuracy": "70%"}
+            angle1 = calc_angle(base_results, i)
+            angle2 = calc_angle(curr_results, i)
+            if(abs(angle1-angle2) >= 8):
+                arr.append("incorrect")
+            else:
+                arr.append("correct")
+            print(i, ": -> ", angle1, angle2)
+    resp = {}
+    resp["right_arm"] = arr[0]
+    resp["left_arm"] = arr[1]
+    resp["right_leg"] = arr[2]
+    resp["left_leg"] = arr[3]
+    resp["right_waist"] = arr[4]
+    resp["left_waist"] = arr[5]
+
+    print(resp)
+    return resp
 
 
 def calc_angle(results, i):

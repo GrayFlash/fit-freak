@@ -13,6 +13,21 @@
     display: flex;
     flex-direction: column;
 }
+.fullpg-background {
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background: url(../img/appbg-2.jpg) no-repeat center center fixed; */
+    /* background-size: cover; */
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed !important;
+    padding-bottom: 0;
+    padding-top: 50px;
+    color: rgb(44, 218, 165);
+    display: flex;
+    flex-direction: column;
+}
 
 .container{
     padding-left: 100px;
@@ -34,13 +49,17 @@
 }
 
 .img-container{
-    min-height: 50vh;
-    min-width: 50vw;
     background-color: black;
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
     justify-content: center;
+}
+
+.black-container{
+    min-height: 60vh;
+    min-width: 60vw;
+    background-color: black;
 }
 
 .images {

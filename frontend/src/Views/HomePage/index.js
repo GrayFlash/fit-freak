@@ -14,7 +14,7 @@ const HomePage = (props) => {
         navigate(`/room/${id}`);
     }
     return (
-        <div className="background">
+        <div className="fullpg-background">
             <div className="text-box">
                 <h1>Fit-o-rama</h1>
                 <br/><br/>
