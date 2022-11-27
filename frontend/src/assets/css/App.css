@@ -1,6 +1,6 @@
 .background {
-    min-height: 100vh;
-    min-width: 100vw;
+    /* min-height: 100vh;
+    min-width: 100vw; */
     /* background: url(../img/appbg-2.jpg) no-repeat center center fixed; */
     /* background-size: cover; */
     background-color: black;
@@ -12,6 +12,42 @@
     color: rgb(44, 218, 165);
     display: flex;
     flex-direction: column;
+}
+
+.container{
+    padding-left: 100px;
+    padding-right: 100px ;
+}
+
+.prediction-button-area{
+    padding: 20px;
+}
+
+.large-green-button {
+    margin: 10px 0px;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 10px 60px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: rgb(44, 220, 165);
+}
+
+.img-container{
+    min-height: 50vh;
+    min-width: 50vw;
+    background-color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.images {
+    width: 350px;
+    height: 230px;
+    padding: 5px;
+    margin: auto;
 }
 
 .text-box {

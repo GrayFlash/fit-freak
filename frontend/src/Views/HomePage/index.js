@@ -22,7 +22,7 @@ const HomePage = (props) => {
                 <br/>
                 <div className="button-group">
                     <button onClick={createRoom}>Join a Video Call</button>
-                    <button>Go for pose accuracy</button>
+                    <a href="/poseaccuracy"><button onClick={navigate('/poseaccuracy')}>Go for pose accuracy</button></a>
                 </div>
             </div>
 
