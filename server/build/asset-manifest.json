@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.09ec67e6.css",
+    "main.js": "/static/js/main.1da15c2e.js",
+    "static/media/micmute.svg": "/static/media/micmute.bbcf8fbb33a3ff07dd1731846856c938.svg",
+    "static/media/micunmute.svg": "/static/media/micunmute.779c00de96a150946efb93cdbb2a5e5a.svg",
+    "static/media/webcamoff.svg": "/static/media/webcamoff.1412862a2670697194f326eedef62086.svg",
+    "static/media/webcam.svg": "/static/media/webcam.0543ccecf7343b4af037f619e8be0621.svg",
+    "index.html": "/index.html",
+    "main.09ec67e6.css.map": "/static/css/main.09ec67e6.css.map",
+    "main.1da15c2e.js.map": "/static/js/main.1da15c2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09ec67e6.css",
+    "static/js/main.1da15c2e.js"
+  ]
+}

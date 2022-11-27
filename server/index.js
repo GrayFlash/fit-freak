@@ -53,10 +53,11 @@ io.on('connection', socket => {
 });
 
 const PORT = process.env.PORT || 8000
-if(process.env.PROD){
-    app.use( express.static(__dirname + '/client/build'));
+if(PORT){
+    console.log("11")
+    app.use( express.static(__dirname + '/build'));
     app.get('*', (request, response) => {
-	    response.sendFile(path.join(__dirname, 'client/build/index.html'));
+	    response.sendFile(path.join(__dirname, 'build/index.html'));
     });
 }
 
